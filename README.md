@@ -3,6 +3,12 @@ An easy to use batch create overlay msg from your clipboard
 
 
 # Usage
+
+## Requirements
+```
+pip install -r requirements.txt
+```
+
 ## while focus is on the widget
 | Action | Alternative | command |
 | :---: | :---: | :---: |
@@ -12,4 +18,3 @@ An easy to use batch create overlay msg from your clipboard
 | `Ctrl + Wheel down↓` | `Ctrl + key↓` | decrease size. |
 | `Ctrl + R` |  | refresh the display content |
 | `Escape` | `Ctrl + C` | close the widget |
-
