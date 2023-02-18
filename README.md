@@ -1,18 +1,21 @@
 # Overlay-msg
+
 An easy to use batch create overlay msg from your clipboard
 
+## Usage
 
-# Usage
+### Requirements
 
-## Requirements
-```
+```batch
 pip install -r requirements.txt
 ```
 
-## On start up
+### On start up
+
 double click and the program will read your clipboard
 
-## While focus is on the widget
+### While focus is on the widget
+
 | Action | Alternative | command |
 | :---: | :---: | :---: |
 | `Wheel up↑` | `key↑` | increase opacity. |
