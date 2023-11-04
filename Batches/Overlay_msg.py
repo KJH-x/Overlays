@@ -81,8 +81,8 @@ def change_content(event: Event):
     global mw, txt, display_content
     print(f"[Command] Change_content:\n{event}")
 
-    if event.state == 12:
-        # aka. ctrl+
+    if event.state == 44:
+        # aka. ctrl+R
         # Replace Content
         if color := re.match(regexes['rgb1'], f"{pyperclip.paste()}"):
             # Color type, change bgcolor
@@ -95,19 +95,22 @@ def change_content(event: Event):
             print(f" - Change background color to #{color.group()}")
         else:
             display_content = f"{pyperclip.paste()}"
-            print(f" - Change content to {display_content}")
+            print(f" - Change content to \"{display_content}\"")
 
     elif event.state == 13:
         # aka. ctrl+shift+
         # Append to the end
         display_content = f"{display_content}\n{pyperclip.paste()}"
-        print(f" - Change content to {display_content}")
+        print(f" - Change content to \"{display_content}\"")
 
     elif event.state == 131085:
         # aka. ctrl+shift+alt
         # Append to the front
         display_content = f"{pyperclip.paste()}\n{display_content}"
-        print(f" - Change content to {display_content}")
+        print(f" - Change content to \"{display_content}\"")
+
+    else:
+        print(event.state)
 
     txt.configure(text=display_content)
     refresh_frame(event)
